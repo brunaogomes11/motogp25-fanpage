@@ -4,8 +4,20 @@ body {
     margin: 0;
     padding: 0;
 }
-h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    padding: 0;
+}
+
+.modo {
+    list-style: none;
+}
+
+.modo-icon {
+    width: 2%;
 }
