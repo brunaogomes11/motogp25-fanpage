@@ -1,6 +1,6 @@
 const video = document.querySelector(".video-background");
 let src = video.currentSrc || video.src;
-console.log(video, src);
+
 // Retirado de: https://codepen.io/shshaw/pen/vYKBPbv/9e810322d70c306de2d18237d0cb2d78
 /* Make sure the video is 'activated' on iOS */
 function once(el, event, fn, opts) {
@@ -26,7 +26,7 @@ let tl = gsap.timeline({
     trigger: "#container",
     start: "top top",
     end: "bottom bottom",
-    scrub: 6 
+    scrub: 4
   }
 });
 

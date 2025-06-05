@@ -1,11 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'MGPDisplay-Regular', sans-serif;
+    background-image: url('../../../assets/categorias/moto2.png');
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-y: hidden;
 }
-h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
+
+.main-container {
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+.equipes-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 2rem;
+    padding-bottom: 0;
+    gap: 4rem;
+    height: 80vh;
+    overflow-y: auto;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.equipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 20vw;
+    height: 50vh;
+    transform: scale(1.0);
+    user-select: none;
+}
+
+.equipe-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.equipe-moto {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.equipe-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.3));
+}
+
+.pilotos-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nome-piloto {
+    font-family: 'MGPDisplay-Light', sans-serif;
+    font-size: 0.8rem;
 }

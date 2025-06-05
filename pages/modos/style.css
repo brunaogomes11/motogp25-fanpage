@@ -1,27 +1,3 @@
-@font-face {
-    font-family: 'MGPDisplay-Bold';
-    src: url('../../../assets/fonts/Display/MGPDisplay-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MGPDisplay-Regular';
-    src: url('../../../assets/fonts/Display/MGPDisplay-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MGPDisplay-Light';
-    src: url('../../../assets/fonts/Display/MGPDisplay-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -50,6 +26,15 @@ body {
     width: 2rem;
     height: 2.5rem;
     padding: 0.5rem 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .modo {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem 1rem;
+    }
+    
 }
 
 .modo:hover {
@@ -103,17 +88,52 @@ body {
     justify-content: flex-start;
     align-items: flex-end;
     box-sizing: border-box;
-    padding-left: 10vw;
+    padding: 10vw;
 }
 
 #section1 {
     height: 80vh;
+    padding-bottom: 0vw;
 }
+
 h1 {
     font-family: 'MGPDisplay-Bold', sans-serif;
     font-size: 3rem;
     color: white;
-    text-align: center;
+    text-align: left;
     margin: 0;
 
+}
+
+.lista-opcoes {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 10px;
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+.opcao {
+    width: max-content;
+    padding: 1rem 2rem;
+    font-family: 'MGPDisplay-Light', sans-serif;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    color: white;
+    box-sizing: border-box;
+    border-top: 3px solid #5C6169;
+    background-color: #1F242A;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.opcao:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.89), 90%, rgba(255, 0, 0, 0.774)), url('../../../assets/background-buttons.jpg');
+    background-size: cover;
+    border-top: 3px solid #CDA68E;
+    transform: scale(1.05);
 }

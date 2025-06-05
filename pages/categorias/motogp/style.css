@@ -1,11 +1,164 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'MGPDisplay-Regular', sans-serif;
+    background-image: url('../../../assets/categorias/motogp.webp');
     margin: 0;
     padding: 0;
+    position: relative;
+
+    overflow-y: hidden;
 }
-h1 {
-    color: #333;
+
+.main-container {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.equipes-list {
+    position: fixed;
+    align-self: center;
+    left: 0;
+    transform: translate(0, 20vh);
+    margin-left: 2rem;
+    width: 25vw;
+    height: 30vh;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    list-style: none;
+    background-color: #f0f0f0b7;
+    padding: 1rem;
+    border-radius: 10px;
+    color: black;
+    font-family: 'MGPDisplay-Light', sans-serif;
+    font-size: 0.8rem;
+    z-index: 3;
+}
+
+.equipes-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
     text-align: center;
-    margin-top: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.equipes-list li:hover {
+    transform: scale(1.05);
+}
+
+.equipe-logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+.video-equipe {
+    position: relative;
+}
+
+.pilotos-equipe {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.piloto {
+    width: 15vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    background-color: #3f3f3fb7;
+    padding: 1rem 0 0 0;
+}
+
+.piloto:first-child {
+    border-top-left-radius: 2rem;
+}
+
+.piloto-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.nome-piloto {
+    font-family: 'MGPDisplay-Bold';
+    text-align: center;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#container {
+    height: 500vh;
+    position: relative;
+}
+
+.menu-topo {
+    position: relative;
+    z-index: 10;
+}
+
+.video-scrub-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vw;
+    z-index: 100;
+
+    input {
+        width: 100%;
+        --webkit-appearance: none;
+        background: #ffffff;
+        border-radius: 10rem;
+        height: 0.5rem;
+
+        
+    }
+
+}
+
+.equipe-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.nome-da-equipe {
+    font-family: 'MGPDisplay-Regular';
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+
 }

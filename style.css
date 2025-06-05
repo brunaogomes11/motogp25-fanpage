@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'MGPDisplay-Bold';
+    src: url('../../../assets/fonts/Display/MGPDisplay-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MGPDisplay-Regular';
+    src: url('../../../assets/fonts/Display/MGPDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MGPDisplay-Light';
+    src: url('../../../assets/fonts/Display/MGPDisplay-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/assets/background-main.webp');
+    background-size: cover;
+    font-family: 'MGPDisplay-Regular', sans-serif;
+    color: white;
+}
+
+.menu-topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    margin-top: 2vh;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.topo-opcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 6rem;
+}
+
+.menu-opcao {
+    width: 5rem;
+    height: 4rem;
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    -o-transform: skew(30deg);
+    transform: skew(30deg);
+    background: #1F242A;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem 0px 0px 1.2rem;
+
+    svg {
+        transform: skew(-30deg);
+        width: 35%;
+    }
+}
+
+.menu-opcao:hover {
+    svg {
+        fill: #ff2d1d;
+    }
+
+    background-color: #000000BA;
+    cursor: pointer;
+}
+
+.logo-banner {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #000000BA;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: 'MGPDisplay-Light', sans-serif;
+        font-size: 1.2rem;
+    }
+}
+
+.links a:hover {
+    color: #ff2d1d;
+}
